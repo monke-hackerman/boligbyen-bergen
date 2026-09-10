@@ -2,16 +2,183 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        
-        <link rel="stylesheet" href="Style/main.css">
+        <!-- css from bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- our css -->
+        <link rel="stylesheet" href="css/style.css">
         <title>Bygg fremtida!</title>
+        <link rel="icon" href="img/logo small.png">
 
     </head>
     <body>
+        <!-- navbar copy for all other html files-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#" aria-current="page"> <!-- logo and name-->
+                <img src="img/boligbyen bergen logo.png" alt="" width="196" height="42" class="d-inline-block align-text-top">
+                
+                <!-- aria-current="page" for å vise bruker current page-->
+            </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
+                <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: flex-end;"> <!-- content, justyfy-content : felx-end; for left side, defualt right side-->
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="html/tjenester-og-prosjekter.html" >Tjenester og Prosjekter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="html/about-us.html">Om oss</a>
+                    </li>
+                    </ul>
+                    <a href="html/kontakt.html" class="btn btn-primary ms-lg-3">Tydelig bestill/kontakt</a>
+                </div>
+            </div>
+          </nav>
+          <!-- navbar end-->
         
+          
 
 
+
+
+
+          
+          <!-- Hovedinnhold starter, første git innlegg fra kladd/tutorial follow mappen - "Håvard"  -->
+          <main>
+
+    <!-- Stort bildeoråde, mulig legge inn logo, eller fjerene bilde i seg selv? -->
+            <section class="bg-light py-4">
+            <div class="">
+            <!-- fremside/ feature bilde -->
+            <img
+                src="img/bryggen.jpg" 
+                class="img-fluid rounded mx-auto d-block"
+                alt="Bolig i Bergen"
+            >
+        </div>
+
+
+    </section>
+
+    <!-- Introduksjon (så langt bare placeholders, kom ikke på noe god informasjon:((()))) -->
+    <section class="container py-5 text-center">
+        <h1>"h1"Velkommen til Boligbyen Bergen</h1>
+        <h2 class="h4 mt-4">"h2"</h2>
+        <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt.
+    </p>
+
+      <p>
+            Her finner du et godt utgangspunkt enten du ønsker å fornye
+            boligen innvendig eller forbedre uteområdet.
+        </p>
+    </section>
+
+    <!-- Tre innholdsblokker tatt ish fra wireframen -->
+    <section class="container pb-5">
+
+         <h2 class="text-center mb-4">Våre tjenester</h2>
+
+    <div class="row g-4">
+
+            <!-- Kort 1 bruker kort funskjonen fra bootstrapp, og -->
+            <div class="col-md-4">
+                <article class="card h-100">
+                <div class="card-body">
+                <h3 class="h5 card-title">Oppussing inne</h3>
+
+                        <p class="card-text">
+                            Les om oppussing av bad og kjøkken og andre trjnester.
+                        </p>
+
+                        <!-- lenke til "oppusning inne" -->
+                        <a href="html/tjenester-og-prosjekter.html" class="btn btn-dark">
+                            Les mer
+                        </a>
+            </div>
+            </article>
+            </div>
+
+            <!-- Kort 2 -->
+            <div class="col-md-4">
+                     <article class="card h-100">
+                    <div class="card-body">
+                     <h3 class="h5 card-title">Vedlikehold ute</h3>
+
+                        <p class="card-text">
+                            Finn informasjon om terrasse, 
+                         tak og andre utvendige prosjekter.
+                        </p>
+
+                        <!-- midlertidig lenke -->
+                        <a href="html/tjenester-og-prosjekter.html" class="btn btn-dark">
+                            Les mer
+                 </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Kort 3 -->
+            <div class="col-md-4">
+                <article class="card h-100">
+              <div class="card-body">
+                        <h3 class="h5 card-title">Leverandører</h3>
+
+                        <p class="card-text">
+                            Finn aktuelle fagfolk, butikker,
+                            priseksempler og tjenester i Bergen.
+                        </p>
+
+                        <!-- legg til riktig lenke etterpå bare.  -->
+                        <a href="html/tjenester-og-prosjekter.html" class="btn btn-dark">
+                            Les mer
+                        </a>
+                    </div>
+                </article>
+                </div>
+
+                </div>
+    </section>
+
+    <!-- Kontaktseksjon dd s -->
+    <section id="kontakt" class="bg-light py-5 text-center">
+
+        <div class="container">
+            <h2>Kontakt oss</h2>
+
+            <p>
+                Har du spørsmål eller ønsker du hjelp til å finne
+                riktig informasjon?
+                </p>
+
+                 <!-- Bytt til kontaktsiden når den er ferdig -->
+             <a href="html/kontakt.html" class="btn btn-primary">
+                Kontakt oss
+            </a>
+            </div>
+
+        </section>
+
+</main>
+<!-- Hovedinnhold slutter -->
+
+
+<!-- Footer -->
+<footer class="container py-4 text-center border-top">
+    <p class="mb-0">
+        <small>
+            &copy; 2026 Boligbyen Bergen –
+            DAT111 semesteroppgave, gruppe 3
+        </small>
+    </p>
+</footer>
+
+
+        <!-- Javascript that makes bootstrap work -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 
 
