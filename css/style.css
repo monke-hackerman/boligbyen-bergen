@@ -47,3 +47,10 @@ p {
     background: #eeeeee;
     padding: 80px 20px;
 }
+
+.strek {
+    width: 50px;
+    height: 2px;
+    background: #1a1a1a;
+    margin: 12px auto 0;
+}
