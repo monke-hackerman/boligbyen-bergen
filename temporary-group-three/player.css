@@ -1,0 +1,46 @@
+/* Alt er avgrenset til #group-three-player og kan slettes sammen med mappen. */
+#group-three-player {
+    max-width: 560px;
+    margin: 24px auto;
+    padding: 20px;
+    border: 1px solid #b99350;
+    border-radius: 16px;
+    background: #19232d;
+    color: #fff5de;
+    width: calc(100% - 32px);
+}
+#group-three-player .g3-heading { font-size: 20px; font-weight: 700; margin-bottom: 14px; }
+#group-three-player .g3-controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+#group-three-player audio { flex: 1 1 220px; width: 100%; min-width: 0; }
+#group-three-player button {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    background: #f1cc80;
+    color: #19232d;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+#group-three-player button:hover { background: #ffe1a7; }
+#group-three-player button:focus-visible { outline: 3px solid #579bff; outline-offset: 3px; }
+#group-three-player .g3-status { font-size: 14px; margin: 10px 0 0; }
+#group-three-player .g3-status:empty { display: none; }
+#group-three-player dialog {
+    width: min(600px, calc(100% - 32px));
+    max-height: 85vh;
+    margin: auto;
+    padding: 24px;
+    overflow-y: auto;
+    border: 1px solid #b99350;
+    border-radius: 16px;
+    background: #19232d;
+    color: #fff5de;
+    box-shadow: 0 20px 80px #0008;
+}
+#group-three-player dialog::backdrop { background: #000b; }
+#group-three-player .g3-dialog-heading { display: flex; align-items: flex-start; gap: 16px; justify-content: space-between; }
+#group-three-player h2 { color: #f1cc80; font-size: 24px; margin: 0; }
+#group-three-player h3 { color: #f1cc80; font-size: 17px; margin: 24px 0 10px; }
+#group-three-player .g3-lyrics p { font-size: 16px; line-height: 1.8; margin: 0 0 16px; }
+#group-three-player code { color: #f1cc80; }
