@@ -42,3 +42,8 @@ p {
     object-fit: cover;
     border-radius: 12px;
 }
+
+.hero {
+    background: #eeeeee;
+    padding: 80px 20px;
+}
