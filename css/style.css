@@ -54,3 +54,15 @@ p {
     background: #1a1a1a;
     margin: 12px auto 0;
 }
+
+.parent-tabell{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.child-tabell{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Defines its own internal columns */
+  gap: 10px;                     /* Defines its own spacing */
+}
