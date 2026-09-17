@@ -66,3 +66,19 @@ p {
   grid-template-columns: 1fr 1fr; /* Defines its own internal columns */
   gap: 10px;                     /* Defines its own spacing */
 }
+
+/* Forsidens hero: bakgrunnsbilde med et mørkt lag for lesbar tekst. */
+.home-hero {
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+        url("../img/bryggen.jpg") center / cover #24313b;
+}
+
+.home-hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.home-hero h1 {
+    color: white;
+}
