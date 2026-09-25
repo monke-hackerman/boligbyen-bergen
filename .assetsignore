@@ -1,0 +1,8 @@
+# Publiser kun nettstedets filer.
+.*
+node_modules/
+wrangler.jsonc
+package.json
+package-lock.json
+README.md
+AGENTS.md
