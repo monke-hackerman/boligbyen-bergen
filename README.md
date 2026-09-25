@@ -4,8 +4,9 @@ Statisk nettsted med HTML, CSS, JavaScript og bilder. Ingen byggekommando er nø
 
 ## Deploy til Cloudflare Workers
 
-`wrangler.jsonc` publiserer nettstedet med Workers Static Assets. Eksisterende
-`.html`-adresser beholdes. `.assetsignore` utelater konfigurasjon og lokale filer.
+`wrangler.jsonc` publiserer nettstedet med Workers Static Assets. Forsiden `/`
+viser `index.html`. Lenker med `.html` videresendes automatisk til adresser uten
+filendelsen. `.assetsignore` utelater konfigurasjon og lokale filer.
 
 ### Fra GitHub
 
