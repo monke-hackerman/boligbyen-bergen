@@ -54,3 +54,66 @@ p {
     background: #1a1a1a;
     margin: 12px auto 0;
 }
+
+.parent-tabell{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.child-tabell{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Defines its own internal columns */
+  gap: 10px;                     /* Defines its own spacing */
+}
+
+/* Forsidens hero: bakgrunnsbilde med et mørkt lag for lesbar tekst. */
+.home-hero {
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.62)),
+        url("../img/bryggen.jpg") center / cover #24313b;
+}
+
+.home-hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.home-hero h1 {
+    color: white;
+}
+
+/*Om oss siden: Åpne luke info bokser*/
+
+/* Hvordan boksen ser ut */
+.info-boks {
+    display: none;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: fit-content;
+}
+.info-boks p{
+    margin: 0px 0;
+    font-size: 15px;
+}
+.info-boks h5{
+    margin-top: 0;
+}
+/* Slår på/viser boksen når linken trykkes*/
+.info-boks:target{
+    display:block;
+    position: relative;
+    z-index: 10;
+}
+
+.lukk-bakgrunn {
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index: -1;
+
+}
