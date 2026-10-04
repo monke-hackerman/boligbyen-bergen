@@ -117,3 +117,16 @@ p {
     z-index: -1;
 
 }
+
+/* ===== Side: oppussing og vedlikeholdsansvar ===== */
+.seksjon h2 {
+    font-size: 20px;
+}
+.seksjon p {
+    max-width: 62ch;
+    font-size: 15px;
+    color: #555;
+}
+.forbehold {
+    background: #eeeeee;
+}
