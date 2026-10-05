@@ -9,15 +9,212 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ravn.css">
 </head>
 <body>
   <header>
     <div id="navbar">
-    <object data="navbar.html" type="text/html" style="width: 100%; height: 60px;"></object>
+      <object data="navbar.html" type="text/html" style="width: 100%; height: 60px;"></object>
     </div>
-    </header>
-    <main>
-      
-    </main>    
+  </header>
+
+  <main>
+    <div class="left">
+      <div class="score-panel unselectable">
+        <div><span id="score">0</span> <span class="currency">BIB$</span></div>
+        <div class="sps-rate"><span id="ccps">0</span> BIB$ / second</div>
+      </div>
+
+      <div class="baguette unselectable">
+        <img src="../img/baguette.png" alt="Baguette" height="256" width="256" onclick="addscore(1)">
+      </div>
+    </div>
+
+    <div class="right unselectable">
+      <div class="shop-card" onclick="getHaavard()">
+        <div class="img-container">
+          <img src="../img/haavard.jpg" alt="Haavard">
+        </div>
+        <div class="details">
+          <p class="item-name">Haavard</p>
+          <p class="item-cost"><span id="HaavardCost">15</span> BIB$</p>
+        </div>
+        <div class="amount"><span id="Haavard">0</span></div>
+      </div>
+
+      <div class="shop-card" onclick="getAdrian()">
+        <div class="img-container">
+          <img src="../img/adrian.jpg" alt="Adrian">
+        </div>
+        <div class="details">
+          <p class="item-name">Adrian</p>
+          <p class="item-cost"><span id="AdrianCost">100</span> BIB$</p>
+        </div>
+        <div class="amount"><span id="Adrian">0</span></div>
+      </div>
+
+      <div class="shop-card" onclick="getMarius()">
+        <div class="img-container">
+          <img src="../img/marius.png" alt="Marius">
+        </div>
+        <div class="details">
+          <p class="item-name">Marius</p>
+          <p class="item-cost"><span id="MariusCost">1 100</span> BIB$</p>
+        </div>
+        <div class="amount"><span id="Marius">0</span></div>
+      </div>
+
+      <div class="shop-card" onclick="getSamuel()">
+        <div class="img-container">
+          <img src="../img/samuel.png" alt="Samuel">
+        </div>
+        <div class="details">
+          <p class="item-name">Samuel</p>
+          <p class="item-cost"><span id="SamuelCost">12 000</span> BIB$</p>
+        </div>
+        <div class="amount"><span id="Samuel">0</span></div>
+      </div>
+
+      <div class="shop-card" onclick="getOlav()">
+        <div class="img-container">
+          <img src="../img/" alt="Olav">
+        </div>
+        <div class="details">
+          <p class="item-name">Olav</p>
+          <p class="item-cost"><span id="OlavCost">130 000</span> BIB$</p>
+        </div>
+        <div class="amount"><span id="Olav">0</span></div>
+      </div>
+
+      <div class="shop-card" onclick="getRavn()">
+        <div class="img-container">
+          <img src="../img/ravn.jpg" alt="Ravn">
+        </div>
+        <div class="details">
+          <p class="item-name">Ravn</p>
+          <p class="item-cost"><span id="RavnCost">1 500 000</span> BIB$</p>
+        </div>
+        <div class="amount"><span id="Ravn">0</span></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let score = 0;
+
+    let HaavardCost = 15;
+    let Haavard = 0;
+
+    let AdrianCost = 100;
+    let Adrian = 0;
+
+    let MariusCost = 1100;
+    let Marius = 0;
+
+    let SamuelCost = 12000;
+    let Samuel = 0;
+
+    let OlavCost = 130000 ;
+    let Olav = 0;
+
+    let RavnCost = 1500000;
+    let Ravn = 0;
+
+    function getHaavard() {
+      if (score >= HaavardCost) {
+        score -= HaavardCost;
+        Haavard++;
+        HaavardCost = Math.round(HaavardCost * 1.20);
+
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("Haavard").innerHTML = Haavard;
+        document.getElementById("HaavardCost").innerHTML = HaavardCost;
+        updateSPS();
+      }
+    }
+
+    function getAdrian() {
+      if (score >= AdrianCost) {
+        score -= AdrianCost;
+        Adrian++;
+        AdrianCost = Math.round(AdrianCost * 1.20);
+
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("Adrian").innerHTML = Adrian;
+        document.getElementById("AdrianCost").innerHTML = AdrianCost;
+        updateSPS();
+      }
+    }
+
+    function getMarius() {
+      if (score >= MariusCost) {
+        score -= MariusCost;
+        Marius++;
+        MariusCost = Math.round(MariusCost * 1.20);
+
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("Marius").innerHTML = Marius;
+        document.getElementById("MariusCost").innerHTML = MariusCost;
+        updateSPS();
+      }
+    }
+
+    function getSamuel() {
+      if (score >= SamuelCost) {
+        score -= SamuelCost;
+        Samuel++;
+        SamuelCost = Math.round(SamuelCost * 1.20);
+
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("Samuel").innerHTML = Samuel;
+        document.getElementById("SamuelCost").innerHTML = SamuelCost;
+        updateSPS();
+      }
+    }
+
+    function getOlav() {
+      if (score >= OlavCost) {
+        score -= OlavCost;
+        Olav++;
+        OlavCost = Math.round(OlavCost * 1.20);
+
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("Olav").innerHTML = Olav;
+        document.getElementById("OlavCost").innerHTML = OlavCost;
+        updateSPS();
+      }
+    }
+
+    
+    function getRavn() {
+      if (score >= RavnCost) {
+        score -= RavnCost;
+        Ravn++;
+        RavnCost = Math.round(RavnCost * 1.20);
+
+        document.getElementById("score").innerHTML = score;
+        document.getElementById("Ravn").innerHTML = Ravn;
+        document.getElementById("RavnCost").innerHTML = RavnCost;
+        updateSPS();
+      }
+    }
+
+
+    function addscore(amount) {
+      score += amount + ((Haavard >= 1) ? Math.round(Haavard * 0.01) : 0);
+      document.getElementById("score").innerHTML = score;
+    }
+
+    function updateSPS() {
+      let scorepersecond = (Adrian * 1) + (Marius * 5) + (Samuel * 47) + (Olav * 260) + (Ravn * 1400);
+      document.getElementById("ccps").innerHTML = scorepersecond;
+    }
+
+    setInterval(function() {
+      score += (Adrian * 1) + (Marius * 5) + (Samuel * 47) + (Olav * 260) + (Ravn * 1400);
+      document.getElementById("score").innerHTML = score;
+      document.title = score + " BIB$ | Ravn Aresønn Glambek";
+    }, 1000);
+  </script>
 </body>
 </html>
