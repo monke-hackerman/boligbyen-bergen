@@ -1,0 +1,155 @@
+
+/*adrian-siden*/
+main {
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background: #111;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.img-button img {
+    display: block;
+    width: 15vw;
+    min-width: 100px;
+    max-width: 300px;
+    animation: spin 6s linear infinite;
+}
+
+#adrian3 {
+    position: absolute;
+    bottom: 37%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20vw;
+    min-width: 150px;
+    max-width: 400px;
+}
+
+.moustache2-display {
+    display: none;
+    position: absolute;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+
+    right: 0;
+    top: 50%;
+    width: 20vw;
+    min-width: 150px;
+    max-width: 400px;
+
+    z-index: 10;
+}
+
+.moustache2-display img {
+    display: block;
+    width: 100%;
+}
+.spin   {
+    animation: spin 6s linear infinite;
+}
+
+.flytte {
+    animation: flyttes 6s ease-in-out forwards;
+}
+
+@keyframes flyttes {
+
+    0% {
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    100% {
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+    }
+}
+
+.massebart {
+    position: absolute;
+    width: 5vw;
+    min-width: 40px;
+    max-width: 100px;
+    animation: spin 6s linear infinite;
+    cursor: pointer;
+    z-index: 5;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.KlarerIkkeTaMeg {
+    animation: KlarerIkkeTaMeg 8s ease-in-out infinite;
+}
+
+@keyframes KlarerIkkeTaMeg {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(-10vw, -10vh);
+    }
+
+    20% {
+        transform: translate(15vw, 5vh);
+    }
+
+    30% {
+        transform: translate(-50vw, -20vh);
+    }
+
+    40% {
+        transform: translate(-75vw, -30vh);
+    }
+
+    50% {
+        transform: translate(-20vw, 10vh);
+    }
+
+    60% {
+        transform: translate(5vw, 30vh);
+    }
+
+    70% {
+        transform: translate(10vw, 20vh);
+    }
+
+    80% {
+        transform: translate(15vw, -15vh);
+    }
+
+    90% {
+        transform: translate(-85vw, 40vh);
+    }
+
+    95% {
+        transform: translate(-75vw, -30vh);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
