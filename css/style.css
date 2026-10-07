@@ -83,7 +83,7 @@ p {
     color: white;
 }
 
-/*Om oss siden: Åpne luke info bokser*/
+/* ===== Om oss siden: Åpne luke info bokser ===== */
 
 /* Hvordan boksen ser ut */
 .info-boks {
@@ -118,6 +118,104 @@ p {
 
 }
 
+/* ==== Samuel.html side ==== */
+
+/* Bakgrunnsbildet */
+body.sam_bakgrunn {
+    background-image: url('../img/ny_guiena.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no repeat;
+    margin: 0;
+}
+
+/*Posisjonering og presentasjon av overskrift og navn */
+.sam_oversk {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 0, 85, 0.5);
+
+}
+
+.sam_navn {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-top: 0;
+
+}
+
+.sam_under_oversk{
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 0, 85, 0.5);    
+}
+/*Posisjonering og presentasjon av paragrafer og tabell */
+.info_tekst_drac, .fakta_tekst_drac {
+    background-color: rgba(20, 20, 20, 0.85);
+    color: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.fakta_tekst_drac table {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse; 
+}
+
+/*Posisjonering og presentasjon av børstepapegøyen*/
+.fugl_bilde {
+    margin: 25px auto;
+    display: table;
+    width: fit-content;
+    border-radius: 14px;
+    background: #111;
+    padding: 4px;
+    animation: draculaGlow 2s linear infinite;
+    max-width: 200px;
+}
+
+/*"Dracula" animasjon-farger tidslinje*/
+@keyframes draculaGlow {
+    0% {box-shadow: 0 0 10px red;}
+    50% {box-shadow: 0 0 40px #dc143c;}
+    100% {box-shadow: 0 0 5px red;}
+}
+
+/*Skru av animasjon-farger hvis brukeren har skrudd av animasjonseffekt i f.eks. windows/innstillinger/tilghengelighet/visuelle effekter */
+@media (prefers-reduced-motion: reduce){
+    .fugl_bilde{
+        animation: none;
+    }
+}
+
+.fugl_bilde img {
+    max-width: 250px;
+    display: block;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.fugl_bilde figcaption {
+    text-align: center;
+    margin-top: 11px;
+    color: #ccc;
+    font-size: 1rem;
+}
 /* ===== Side: oppussing og vedlikeholdsansvar ===== */
 
 .seksjon h2 {
