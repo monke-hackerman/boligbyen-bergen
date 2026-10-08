@@ -8,7 +8,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/ravn.css">
 </head>
 <body>
@@ -96,9 +95,34 @@
         </div>
         <div class="amount"><span id="Ravn">0</span></div>
       </div>
-    </div>
   </main>
+  <footer class="bottom">
+    <div class="about-container">
+      <h2>Om Ravn Aresønn Glambek</h2>
+      <p>
+        Hei,
+      </p>
+    </div>
 
+    <div class="table-container">
+      <h2>Siste kjøp</h2>
+      <table class="purchase-table">
+        <thead>
+          <tr>
+            <th>Siste kjøp</th>
+            <th>Tidspunkt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="purches">Ingen kjøp enda</td>
+            <td id="when">-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </footer>
+  
   <script>
     let score = 0;
 
@@ -120,6 +144,11 @@
     let RavnCost = 1500000;
     let Ravn = 0;
 
+    function getFormattedTime() {
+      const now = new Date();
+      return now.toLocaleTimeString('no-NO');
+    }
+
     function getHaavard() {
       if (score >= HaavardCost) {
         score -= HaavardCost;
@@ -129,6 +158,8 @@
         document.getElementById("score").innerHTML = score;
         document.getElementById("Haavard").innerHTML = Haavard;
         document.getElementById("HaavardCost").innerHTML = HaavardCost;
+        document.getElementById("purches").innerHTML = "Haavard";
+        document.getElementById("when").innerHTML = getFormattedTime();
         updateSPS();
       }
     }
@@ -142,6 +173,8 @@
         document.getElementById("score").innerHTML = score;
         document.getElementById("Adrian").innerHTML = Adrian;
         document.getElementById("AdrianCost").innerHTML = AdrianCost;
+        document.getElementById("purches").innerHTML = "Adrian";
+        document.getElementById("when").innerHTML = getFormattedTime();
         updateSPS();
       }
     }
@@ -155,6 +188,8 @@
         document.getElementById("score").innerHTML = score;
         document.getElementById("Marius").innerHTML = Marius;
         document.getElementById("MariusCost").innerHTML = MariusCost;
+        document.getElementById("purches").innerHTML = "Marius";
+        document.getElementById("when").innerHTML = getFormattedTime();
         updateSPS();
       }
     }
@@ -168,6 +203,8 @@
         document.getElementById("score").innerHTML = score;
         document.getElementById("Samuel").innerHTML = Samuel;
         document.getElementById("SamuelCost").innerHTML = SamuelCost;
+        document.getElementById("purches").innerHTML = "Samuel";
+        document.getElementById("when").innerHTML = getFormattedTime();
         updateSPS();
       }
     }
@@ -181,11 +218,12 @@
         document.getElementById("score").innerHTML = score;
         document.getElementById("Olav").innerHTML = Olav;
         document.getElementById("OlavCost").innerHTML = OlavCost;
+        document.getElementById("purches").innerHTML = "Olav";
+        document.getElementById("when").innerHTML = getFormattedTime();
         updateSPS();
       }
     }
 
-    
     function getRavn() {
       if (score >= RavnCost) {
         score -= RavnCost;
@@ -195,13 +233,15 @@
         document.getElementById("score").innerHTML = score;
         document.getElementById("Ravn").innerHTML = Ravn;
         document.getElementById("RavnCost").innerHTML = RavnCost;
+        document.getElementById("purches").innerHTML = "Ravn";
+        document.getElementById("when").innerHTML = getFormattedTime();
         updateSPS();
       }
     }
 
 
     function addscore(amount) {
-      score += amount + ((Haavard >= 1) ? Math.round(Haavard * 0.01) : 0);
+      score += amount + ((Haavard >= 1) ? Math.round(Haavard * 0.1) : 0);
       document.getElementById("score").innerHTML = score;
     }
 
