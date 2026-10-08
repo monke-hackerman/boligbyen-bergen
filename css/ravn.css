@@ -10,6 +10,9 @@
   
   body {
     background-color: var(--bg-dark);
+    background-image: url("../img/baguette.png");
+    background-size: 80px 120px;
+    background-repeat: repeat;
     color: var(--text-light);
     margin: 0;
     padding: 0;
