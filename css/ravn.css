@@ -210,7 +210,7 @@
   border: 1px solid var(--panel-hover);
 }
 
-.about-container h2, .table-container h2 {
+.about-container h1, .table-container h1 {
   color: var(--primary-color);
   font-family: 'Oswald', sans-serif;
   margin-top: 0;
