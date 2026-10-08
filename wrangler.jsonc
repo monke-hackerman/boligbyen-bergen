@@ -1,3 +1,8 @@
+//fil for opptatering av nettsiden boligbergen.site
+//akk nå er vil ikke nettsiden opptateres automatisk etter endringer,
+//så håvard må kjøre en "npx wrangler deploy" pga nettsiden er knyttet opp mot hans cloudflare
+
+
 {
   "name": "boligbyen-bergen",
   "compatibility_date": "2026-09-25",
