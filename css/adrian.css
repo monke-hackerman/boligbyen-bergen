@@ -161,3 +161,7 @@ main {
     align-items: right;
     position: relative;
 }
+
+table, th, td {
+  border:1px solid black;
+}
