@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <title>Håvard Nygjerde</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../img/logo-small.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/haavard.css">
+</head>
+<body>
+    <div class="baguette-background" aria-hidden="true">
+      <img src="../img/vievie/player.png" alt="">
+      <img src="../img/vievie/b01.png" alt="">
+      <img src="../img/vievie/b02.png" alt="">
+      <img src="../img/vievie/b03.png" alt="">
+      <img src="../img/vievie/b04.png" alt="">
+      <img src="../img/vievie/b05.png" alt="">
+      <img src="../img/vievie/b06.png" alt="">
+      <img src="../img/vievie/b07.png" alt="">
+      <img src="../img/vievie/b08.png" alt="">
+      <img src="../img/vievie/b09.png" alt="">
+      <img src="../img/vievie/b10.png" alt="">
+      <img src="../img/vievie/b11.png" alt="">
+      <img src="../img/vievie/b12.png" alt="">
+      <img src="../img/vievie/b13.png" alt="">
+      <img src="../img/vievie/b14.png" alt="">
+      <img src="../img/vievie/b15.png" alt="">
+      <img src="../img/vievie/b16.png" alt="">
+      <img src="../img/vievie/b17.png" alt="">
+      <img src="../img/vievie/b18.png" alt="">
+      <img src="../img/vievie/b19.png" alt="">
+      <img src="../img/vievie/b20.png" alt="">
+      <img src="../img/vievie/b21.png" alt="">
+      <img src="../img/vievie/b22.png" alt="">
+      <img src="../img/vievie/b23.png" alt="">
+      <img src="../img/vievie/b24.png" alt="">
+      <img src="../img/vievie/b25.png" alt="">
+      <img src="../img/vievie/b26.png" alt="">
+    </div>
+  <header>
+    <div id="navbar">
+    <object data="navbar.html" type="text/html" style="width: 100%; height: 60px;" aria-label="Main Navigation"></object>
+    </div>
+    </header>
+    <main class="havard-main">
+      <section class="page-card">
+        <div class="intro">
+          <p class="eyebrow">Personlig side</p>
+          <h1>Hei, jeg er Håvard | Larping is my passion</h1>
+          <p>
+            Jeg er nysgjerrig på hvordan ting fungerer, og liker å finne ut hvordan de er bygget.
+            På fritiden holder jeg gjerne på med homelab og selfhosting – særlig prosjekter
+            jeg kan bygge og drifte selv. Jeg liker også kitesurfing, innendørs buldring og
+            friluftsliv, gjerne med telt og fiskestang. Når jeg er hjemme, lager jeg gjerne
+            mat, og kjøttretter er en favoritt.
+          </p>
+        </div>
+
+        <div class="content-grid">
+          <article class="info-box">
+            <h2>Om meg</h2>
+            <p>
+              Jeg trives best når jeg får utforske, bygge eller lære noe nytt. Det kan
+              være et teknologiprosjekt hjemme, en tur ut i naturen eller en ny oppskrift
+              på kjøkkenet.
+            </p>
+            <ul>
+              <li>Teknologi: homelab og selfhosting</li>
+              <li>Aktivt: kitesurfing og buldring</li>
+              <li>Ute: telt- og fisketurer</li>
+              <li>På kjøkkenet: særlig glad i å lage kjøttretter</li>
+            </ul>
+            <div class="about-media">
+              <figure>
+                <img class="profile-photo" src="../img/vievie/IMG_2298.PNG" alt="Håvard med kite ved sjøen">
+                <figcaption>Kitesurfing på karmøy!</figcaption>
+              </figure>
+              <figure>
+                <video controls playsinline preload="metadata" poster="../img/vievie/IMG_2298.PNG">
+                  <source src="../img/vievie/VID_20240328_182857_00_683.MP4" type="video/mp4">
+                  Nettleseren din støtter ikke videoavspilling.
+                </video>
+                <figcaption>snøkiting på fjellet!</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <div class="game-card">
+            <div class="game-top">
+              <div class="game-heading">
+                <h2>Average dag i paris</h2>
+                <h5>klarer du å fulløre dine daglige ærend despite alle selvdesktrutive franskmennene rundt deg?</h5>
+              </div>
+              <div class="score-display" aria-live="polite">
+                Baguetter: <span id="scoreDisplay">0</span>
+              </div>
+            </div>
+
+            <div id="gameArea" class="game-area" tabindex="0" aria-label="Flappy bird spill">
+              <img id="bird" class="bird" src="../img/vievie/b08.png" alt="Mime med baguetter">
+              <div id="gameMessage" class="game-message hidden">
+                <strong>Game over!</strong>
+                <span>Trykk for å prøve igjen</span>
+              </div>
+            </div>
+
+            <div class="game-controls">
+              <button id="startButton" type="button">Start spill</button>
+              <p>Klikk inni spillet eller trykk mellomrom for å flakse</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      var gameArea = document.getElementById('gameArea');
+      var bird = document.getElementById('bird');
+      var scoreDisplay = document.getElementById('scoreDisplay');
+      var gameMessage = document.getElementById('gameMessage');
+      var startButton = document.getElementById('startButton');
+      var obstacles = [];
+      var birdY = 120;
+      var speed = 0;
+      var score = 0;
+      var playing = false;
+      var lastObstacle = 0;
+
+      function startGame() {
+        obstacles.forEach(function (obstacle) {
+          obstacle.element.remove();
+        });
+        obstacles = [];
+        birdY = 120;
+        speed = -6;
+        score = 0;
+        playing = true;
+        lastObstacle = Date.now();
+        bird.style.top = birdY + 'px';
+        gameMessage.classList.add('hidden');
+        startButton.textContent = 'Start spill';
+        scoreDisplay.textContent = score;
+      }
+
+      function addObstacle() {
+        var gap = 105;
+        var topHeight = 40 + Math.random() * 100;
+        var obstacle = document.createElement('div');
+        var topPipe = document.createElement('img');
+        var bottomPipe = document.createElement('img');
+        var baguette = document.createElement('img');
+
+        obstacle.className = 'obstacle';
+        obstacle.style.left = gameArea.clientWidth + 'px';
+        topPipe.className = 'pipe top';
+        topPipe.src = '../img/vievie/tower.jpg';
+        topPipe.alt = '';
+        topPipe.style.height = topHeight + 'px';
+        bottomPipe.className = 'pipe bottom';
+        bottomPipe.src = '../img/vievie/tower.jpg';
+        bottomPipe.alt = '';
+        bottomPipe.style.height = (gameArea.clientHeight - 28 - topHeight - gap) + 'px';
+
+        baguette.className = 'collectible';
+        baguette.src = '../img/baguette.png';
+        baguette.alt = 'Samle baguett';
+        var baguetteY = topHeight + (gap - 46) / 2;
+        baguette.style.top = baguetteY + 'px';
+
+        obstacle.appendChild(topPipe);
+        obstacle.appendChild(bottomPipe);
+        obstacle.appendChild(baguette);
+        gameArea.appendChild(obstacle);
+        obstacles.push({
+          element: obstacle,
+          baguette: baguette,
+          x: gameArea.clientWidth,
+          topHeight: topHeight,
+          gap: gap,
+          baguetteY: baguetteY,
+          passed: false
+        });
+      }
+
+      function endGame() {
+        playing = false;
+        gameMessage.classList.remove('hidden');
+        startButton.textContent = 'Spill igjen';
+      }
+
+      function flap() {
+        if (!playing) {
+          startGame();
+        }
+        speed = -6;
+      }
+
+      function updateGame() {
+        if (playing) {
+          speed += 0.4;
+          birdY += speed;
+          bird.style.top = birdY + 'px';
+
+          if (Date.now() - lastObstacle > 1400) {
+            addObstacle();
+            lastObstacle = Date.now();
+          }
+
+          for (var i = obstacles.length - 1; i >= 0; i--) {
+            var obstacle = obstacles[i];
+            obstacle.x -= 3;
+            obstacle.element.style.left = obstacle.x + 'px';
+
+            var birdLeft = 100;
+            var birdRight = 140;
+            var birdTop = birdY + 7;
+            var birdBottom = birdY + 35;
+
+            if (obstacle.x < birdRight && obstacle.x + 70 > birdLeft &&
+                (birdTop < obstacle.topHeight || birdBottom > obstacle.topHeight + obstacle.gap)) {
+              endGame();
+            }
+
+            if (!obstacle.passed &&
+                obstacle.x + 82 < birdRight &&
+                obstacle.x + 106 > birdLeft &&
+                birdTop < obstacle.baguetteY + 46 &&
+                birdBottom > obstacle.baguetteY) {
+              obstacle.passed = true;
+              score++;
+              obstacle.baguette.remove();
+              scoreDisplay.textContent = score;
+            }
+
+            if (obstacle.x < -70) {
+              obstacle.element.remove();
+              obstacles.splice(i, 1);
+            }
+          }
+
+          if (birdY + 7 < 0 || birdY + 35 > gameArea.clientHeight - 28) {
+            endGame();
+          }
+        }
+      }
+
+      gameArea.addEventListener('click', flap);
+      document.addEventListener('keydown', function (event) {
+        if (event.code === 'Space' || event.code === 'ArrowUp') {
+          event.preventDefault();
+          flap();
+        }
+      });
+      startButton.addEventListener('click', startGame);
+      setInterval(updateGame, 20);
+    </script>
+</body>
+</html>

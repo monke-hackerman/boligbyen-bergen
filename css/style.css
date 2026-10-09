@@ -82,3 +82,205 @@ p {
 .home-hero h1 {
     color: white;
 }
+
+/* ===== Om oss siden: Åpne luke info bokser ===== */
+
+/* Hvordan boksen ser ut */
+.info-boks {
+    display: none;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: fit-content;
+}
+.info-boks p{
+    margin: 0px 0;
+    font-size: 15px;
+}
+.info-boks h5{
+    margin-top: 0;
+}
+/* Slår på/viser boksen når linken trykkes*/
+.info-boks:target{
+    display:block;
+    position: relative;
+    z-index: 10;
+}
+
+.lukk-bakgrunn {
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index: -1;
+
+}
+
+/* ==== Samuel.html side ==== */
+
+/* Bakgrunnsbildet */
+body.sam_bakgrunn {
+    background-image: url('../img/ny_guiena.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    animation: draculaGlow 1s linear infinite;
+    box-sizing: border-box;
+    padding-bottom: 120px;
+
+}
+
+/*Posisjonering og presentasjon av overskrift og navn */
+.sam_oversk, .sam_under_oversk {
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 0, 85, 0.5);
+
+}
+
+.sam_navn {
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    margin-top: 0;
+
+}
+
+/*Posisjonering og presentasjon av paragrafer og tabell */
+.info_tekst_drac, .fakta_tekst_drac {
+    background-color: rgba(20, 20, 20, 0.85);
+    color: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.fakta_tekst_drac table {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse; 
+}
+
+/*Posisjonering og presentasjon av børstepapegøyen*/
+.fugl_bilde {
+    margin: 25px auto;
+    display: table;
+    border-radius: 14px;
+    background: #111;
+    padding: 4px;
+    animation: draculaGlow 1s linear infinite;
+    max-width: 200px;
+}
+
+/*"Dracula" animasjon-farger tidslinje*/
+@keyframes draculaGlow {
+    0% {box-shadow: inset 0 0 10px red;}
+    50% {box-shadow: inset 0 0 40px #dc143c;}
+    100% {box-shadow: inset 0 0 5px red;}
+}
+
+/*Skru av animasjon-farger hvis brukeren har skrudd av animasjonseffekt i OS f.eks. windows/innstillinger/tilghengelighet/visuelle effekter */
+@media (prefers-reduced-motion: reduce){
+    .fugl_bilde, body.sam_bakgrunn {
+        animation: none;
+    }
+}
+
+.fugl_bilde img {
+    display: block;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.fugl_bilde figcaption {
+    text-align: center;
+    margin-top: 11px;
+    color: #ccc;
+    font-size: 1rem;
+}
+/* ===== Side: oppussing og vedlikeholdsansvar ===== */
+
+.seksjon h2 {
+    font-size: 20px;
+}
+.seksjon p {
+    font-size: 15px;
+    color: #555;
+}
+.forbehold {
+    background: #eeeeee;
+}
+
+/* kontakt oss from style */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #333333;
+    font-size: 24px;
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666666;
+    font-weight: 600;
+    font-size: 14px;
+}
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #085cb5;
+    outline: none;
+}
+.form-group textarea {
+    resize: vertical;
+    height: 120px;
+}
+.submit-btn {
+    width: 100%;
+    background-color: #0560c1;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+

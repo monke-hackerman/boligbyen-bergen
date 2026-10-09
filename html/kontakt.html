@@ -11,7 +11,7 @@
     <body>
     <!-- navbar copy for all other html files-->
         <div id="navbar">
-            <object data="navbar.html" type="text/html" style="width: 100%; height: 60px;"></object>  
+            <object data="navbar.html" type="text/html" style="width: 100%; height: 60px;" aria-label="Main Navigation"></object>  
         </div>
         <!-- navbar slutt -->
 
@@ -24,17 +24,52 @@
         </section>
 
         <section class="container">
-                <h2>Kontaktinformasjon</h2>
-                <p>Telefon: 455 554 555</p>
-                <p>E-post: BoligiBergen@gmail.com</p>
-                <p>Adresse: Allégaten 22, 5007 Bergen</p>
-                <p>Åpningstider: Mandag-Fredag 09:00-17:00</p>
+            <div class="child-tabell">
+                <div>
+                    <h2>Kontaktinformasjon</h2> <br>
+                    <p><img src="../img/phone.svg" alt=""> Telefon: 455 554 555</p> <br>
+                    <p><img src="../img/mail.svg" alt=""> E-post: BoligiBergen@gmail.com</p><br>
+                    <p><img src="../img/map-pin-house.svg" alt=""> Adresse: Allégaten 22, 5007 Bergen</p><br>
+                    <p><img src="../img/calendar-check-2.svg" alt=""> Åpningstider: Mandag-Fredag 09:00-17:00</p>
+                </div>
+        
+                <div>
+                    <div class="form-container">
+                        <h2>Send oss en melding</h2>
+                        <!-- Update the action attribute with your backend processor or form service -->
+                        <form action="/your-backend-endpoint" method="POST">
+                            <div class="form-group">
+                                <label for="name">Navn</label>
+                                <input type="text" id="name" name="name" placeholder="Kari Gok" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Epost addresse</label>
+                                <input type="email" id="email" name="email" placeholder="karigok@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Emne</label>
+                                <input type="text" id="subject" name="subject" placeholder="Hvordan kan vi hjelpe?" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Melding</label>
+                                <textarea id="message" name="message" placeholder="Skriv medlingen din her..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">Send mail</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </section>
- 
+
         <div class="container">
             <h2>Finn oss</h2>
             <p>Vi finnes i sentrum av Bergen, ved Allégaten 22.</p>
-            <iframe style="width: 100%; height: 100%; border: 0; overflow: hidden; display: block;" allowfullscreen src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=allegaten%2022%2C%20bergen&amp;maptype=roadmap&amp;zoom=14"></iframe>
+            <iframe style="width: 100%; height: 100%; border: 0; overflow: hidden; display: block;" allowfullscreen title="Kart til Allégaten 22, 5007 Bergen" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=allegaten%2022%2C%20bergen&amp;maptype=roadmap&amp;zoom=14"></iframe>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -44,7 +79,7 @@
                     &copy; 2026 Boligbyen Bergen –
                     DAT111 semesteroppgave, gruppe 3
                 </small>
-             </p>
+            </p>
         </footer>
     </body>
 
