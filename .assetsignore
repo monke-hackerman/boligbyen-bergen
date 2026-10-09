@@ -1,2 +1,8 @@
-
+.git/
+.wrangler/
+.DS_Store
+.assetsignore
+.gitignore
+README.md
+wrangler.jsonc
 img/vievie/VID_20240328_182857_00_683.MP4
