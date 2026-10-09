@@ -1,8 +1,2 @@
-# Publiser kun nettstedets filer.
-.*
-node_modules/
-wrangler.jsonc
-package.json
-package-lock.json
-README.md
-AGENTS.md
+#dette er en ekskuderingsfil for nettsiden boligbergen.site
+img/vievie/VID_20240328_182857_00_683.MP4
