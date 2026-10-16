@@ -36,6 +36,7 @@ main {
     width: 20vw;
     min-width: 150px;
     max-width: 400px;
+    display: none;
 }
 
 .moustache2-display {
