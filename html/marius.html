@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <title>Marius Alexander Aven Pena</title>
+  <title>Marius Alexander Aven </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../img/logo-small.png">
@@ -23,7 +23,7 @@
     <div class="container marius-boks">
       <img src="../img/sealion swag.avif" alt="Bilde av Marius" class="marius-bilde">
 
-      <!-- Denne delen forsvinner når man har valgt -->
+      
       <div id="valg-del">
         <h1>Hei, Æ e Marius!</h1>
         <p class="ingress">Hva vil du vite om mæ? Du får bare velge <strong>én</strong> ting, så velg med omhu...</p>
@@ -48,7 +48,7 @@
   </main>
 
   <script>
-    // Her skriver du inn svarene dine. Endre teksten mellom anførselstegnene.
+    
     const svar = {
       farge: {
         tittel: "Favorittfargen min er blå",
@@ -85,10 +85,10 @@
       knapp.addEventListener("click", function () {
         const valgt = svar[knapp.dataset.valg];
 
-        // 1. Alle valgene toner ut
+        // Valgene forsvinner
         document.getElementById("valg-del").classList.add("ton-ut");
 
-        // 2. Når de er borte, vises bare svaret
+        // det e bare svaret som vises
         setTimeout(function () {
           document.getElementById("valg-del").remove();
 
