@@ -1,0 +1,89 @@
+/* Stil for Marius sin side */
+
+body {
+    transition: background-color 1s;
+}
+
+/* Sjøløva som bakgrunn. Legges bare på når man velger "Fun fact". */
+body.sjoloeve-bakgrunn {
+    background-image: url("../img/sealion.jpg");
+    background-size: cover;          /* fyller hele skjermen */
+    background-position: center top;
+    background-attachment: fixed;    /* bildet står stille når man scroller */
+    background-color: #2b6cb0;       /* vises hvis bildet ikke laster */
+}
+
+.marius-boks {
+    max-width: 700px;
+    text-align: center;
+}
+
+.marius-bilde {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.ingress {
+    margin-bottom: 25px;
+}
+
+.knapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.valg-knapp {
+    padding: 16px;
+    font-size: 18px;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+    background: white;
+    cursor: pointer;
+    transition: transform 0.15s, background-color 0.15s;
+}
+
+.valg-knapp:hover {
+    background: #1a1a1a;
+    color: white;
+    transform: scale(1.05);
+}
+
+.ton-ut {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.svar {
+    animation: pop-inn 0.6s ease-out;
+}
+
+.skjult {
+    display: none;
+}
+
+@keyframes pop-inn {
+    from { opacity: 0; transform: scale(0.6); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+.refresh-tips {
+    margin-top: 30px;
+    font-size: 15px;
+    color: #777;
+}
+
+/* Én kolonne med knapper på mobil */
+@media (max-width: 500px) {
+    .knapper {
+        grid-template-columns: 1fr;
+    }
+}
