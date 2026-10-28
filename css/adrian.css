@@ -1,5 +1,17 @@
-
 /*adrian-siden*/
+body {
+    background-color: black;
+    margin: 0;
+}
+
+#main {
+    background-color: black;
+}
+
+#Megselv {
+    background-color: black;
+    color: white;
+}
 main {
     min-height: calc(100vh - 60px);
     width: 100%;
@@ -159,7 +171,6 @@ main {
     min-height:auto;
     display: block;
     justify-content: space-between;
-    align-items: right;
     position: relative;
 }
 
