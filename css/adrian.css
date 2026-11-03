@@ -1,5 +1,17 @@
-
 /*adrian-siden*/
+body {
+    background-color: black;
+    margin: 0;
+}
+
+#main {
+    background-color: black;
+}
+
+#Megselv {
+    background-color: black;
+    color: white;
+}
 main {
     min-height: calc(100vh - 60px);
     width: 100%;
@@ -36,6 +48,7 @@ main {
     width: 20vw;
     min-width: 150px;
     max-width: 400px;
+    display: none;
 }
 
 .moustache2-display {
@@ -152,4 +165,15 @@ main {
     100% {
         transform: translate(0, 0);
     }
+}
+.bilder {
+    max-width: 20%;
+    min-height:auto;
+    display: block;
+    justify-content: space-between;
+    position: relative;
+}
+
+table, th, td {
+  border:1px solid black;
 }
